@@ -1,0 +1,231 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+  <meta http-equiv="Content-Security-Policy" content="default-src * data: gap: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+  <script src="components/loader.js"></script>
+  <script src="lib/onsenui/js/onsenui.min.js"></script>
+
+  <link rel="stylesheet" href="components/loader.css">
+  <link rel="stylesheet" href="lib/onsenui/css/onsenui.css">
+  <link rel="stylesheet" href="lib/onsenui/css/onsen-css-components.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <script>
+    // Page init event
+    document.addEventListener('init', function(event) {
+      var page = event.target;
+
+      if (page.matches('#first-page')) {
+
+        page.querySelector('#page2').onclick = function() {
+          document.querySelector('#navigator').pushPage('page2.html');
+        };
+        page.querySelector('#page5').onclick = function() {
+          document.querySelector('#navigator').pushPage('page5.html');
+        };
+
+      } else if (page.matches('#second-page')) {
+
+        page.querySelector('#page3').onclick = function() {
+          document.querySelector('#navigator').pushPage('page3.html');
+        };
+        page.querySelector('#page4').onclick = function() {
+          document.querySelector('#navigator').pushPage('page4.html');
+        };
+
+      } else if (page.matches('#third-page')){
+
+        page.querySelector('#become').onclick = function() {
+          document.querySelector('#navigator').resetToPage('page1.html');
+        };
+
+      } else if (page.matches('#four-page')){
+
+        page.querySelector('#become').onclick = function() {
+          document.querySelector('#navigator').resetToPage('page1.html');
+        };
+
+      } else if (page.matches('#five-page')){
+
+        page.querySelector('#page6').onclick = function() {
+          document.querySelector('#navigator').pushPage('page6.html');
+        };
+        page.querySelector('#page9').onclick = function() {
+          document.querySelector('#navigator').pushPage('page9.html');
+        };
+
+      } else if (page.matches('#six-page')){
+
+        page.querySelector('#page7').onclick = function() {
+          document.querySelector('#navigator').pushPage('page7.html');
+        };
+        page.querySelector('#page8').onclick = function() {
+          document.querySelector('#navigator').pushPage('page8.html');
+        };
+
+      } else if (page.matches('#seven-page')){
+
+        page.querySelector('#become').onclick = function() {
+          document.querySelector('#navigator').resetToPage('page1.html');
+        };
+
+      } else if (page.matches('#eight-page')){
+
+        page.querySelector('#become').onclick = function() {
+          document.querySelector('#navigator').resetToPage('page1.html');
+        };
+
+      } else if (page.matches('#nine-page')){
+
+        page.querySelector('#become').onclick = function() {
+          document.querySelector('#navigator').resetToPage('page1.html');
+        };
+        
+      }
+    });
+
+    if (ons.platform.isIPhoneX()) {
+      document.documentElement.setAttribute('onsflag-iphonex-portrait', '');
+      document.documentElement.setAttribute('onsflag-iphonex-landscape', '');
+    }
+  </script>
+
+</head>
+<body>
+  <ons-navigator id="navigator" page="page1.html"></ons-navigator>
+
+  <ons-template id="page1.html">
+    <ons-page id="first-page">
+      <ons-toolbar>
+        <div class="center">個人的おすすめゲーム診断</div>
+      </ons-toolbar>
+
+      <div class="content"style="text-align: center">
+        <p>対戦ゲームが好き</p>
+        <ons-button id="page2">Yes</ons-button>
+        <ons-button id="page5">No</ons-button>
+      </div>
+    </ons-page>
+  </ons-template>
+
+  <ons-template id="page2.html">
+    <ons-page id="second-page">
+      <ons-toolbar>
+        <div class="left"><ons-back-button>戻る</ons-back-button></div>
+        <div class="center">個人的おすすめゲーム診断</div>
+      </ons-toolbar>
+       <div class="content" style="text-align: center">
+          <p>銃撃戦が好き</p>
+          <ons-button id="page3">Yes</ons-button>
+          <ons-button id="page4">No</ons-button>
+      </div>
+    </ons-page>
+  </ons-template>
+
+  <ons-template id="page3.html">
+    <ons-page id="third-page">
+      <ons-toolbar>
+        <div class="center">個人的おすすめゲーム診断</div>
+      </ons-toolbar>
+      <div class="content" style="text-align: center">
+          <p>あなたにオススメのゲームは……</p>
+          <p>Apex</p>
+          <p>無料でできるよ</p>
+          <p>プラットフォーム：PS4、PC</p>
+          <ons-button id="become">最初からやり直す</ons-button>
+        </div>
+    </ons-page>
+  </ons-template>
+
+  <ons-template id="page4.html">
+    <ons-page id="four-page">
+      <ons-toolbar>
+        <div class="center">個人的おすすめゲーム診断</div>
+      </ons-toolbar>
+      <div class="content" style="text-align: center">
+          <p>あなたにオススメのゲームは……</p>
+          <p>Dead By Daylight</p>
+          <p>個人的にすごくオススメ！ キラー大募集！</p>
+          <p>プラットフォーム：PS4、PC、switch、モバイル</p>
+          <ons-button id="become">最初からやり直す</ons-button>
+      </div>
+    </ons-page>
+  </ons-template>
+
+  <ons-template id="page5.html">
+    <ons-page id="five-page">
+      <ons-toolbar>
+        <div class="left"><ons-back-button>戻る</ons-back-button></div>
+        <div class="center">個人的おすすめゲーム診断</div>
+      </ons-toolbar>
+      <div class="content"style="text-align: center">
+        <p>RPGが好き</p>
+        <ons-button id="page6">Yes</ons-button>
+        <ons-button id="page9">No</ons-button>
+      </div>
+    </ons-page>
+  </ons-template>
+
+  <ons-template id="page6.html">
+    <ons-page id="six-page">
+      <ons-toolbar>
+        <div class="left"><ons-back-button>戻る</ons-back-button></div>
+        <div class="center">個人的おすすめゲーム診断</div>
+      </ons-toolbar>
+      <div class="content"style="text-align: center">
+        <p>クエストをとにかくやりたい</p>
+        <ons-button id="page7">Yes</ons-button>
+        <ons-button id="page8">No</ons-button>
+      </div>
+    </ons-page>
+  </ons-template>
+
+ <ons-template id="page7.html">
+    <ons-page id="seven-page">
+      <ons-toolbar>
+        <div class="center">個人的おすすめゲーム診断</div>
+      </ons-toolbar>
+      <div class="content"style="text-align: center">
+          <p>あなたにオススメのゲームは……</p>
+          <p>DEATH　STRANDING</p>
+          <p>ストーリークリア後もミッションたくさん！</p>
+          <p>プラットフォーム：PS4</p>
+          <ons-button id="become">最初からやり直す</ons-button>
+      </div>
+    </ons-page>
+  </ons-template>
+
+  <ons-template id="page8.html">
+    <ons-page id="eight-page">
+      <ons-toolbar>
+        <div class="center">個人的おすすめゲーム診断</div>
+      </ons-toolbar>
+      <div class="content"style="text-align: center">
+          <p>あなたにオススメのゲームは……</p>
+          <p>死印</p>
+          <p>ホラーアドベンチャーで楽しめる！</p>
+          <p>プラットフォーム：PS Vita、PS4、PC、switch</p>
+          <ons-button id="become">最初からやり直す</ons-button>
+      </div>
+    </ons-page>
+  </ons-template>
+
+  <ons-template id="page9.html">
+    <ons-page id="nine-page">
+      <ons-toolbar>
+        <div class="center">個人的おすすめゲーム診断</div>
+      </ons-toolbar>
+      <div class="content"style="text-align: center">
+          <p>あなたにオススメのゲームは……</>
+          <p>私の範囲外です</p>
+          <p>スポーツとか、レーシング、はたまた音ゲーとか。</p>
+          <p>自分で好きなゲームを見つけてみよう！</p>
+          <ons-button id="become">最初からやり直す</ons-button>
+      </div>
+    </ons-page>
+  </ons-template>
+
+</body>
+</html>
